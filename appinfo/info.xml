@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<info>
+	<id>to_ragflow</id>
+	<name>ToRagflow</name>
+	<summary>Nextcloud To Ragflow</summary>
+	<description>
+	<![CDATA[Example of a Nextcloud application written in Python]]>
+	</description>
+	<version>1.0.0</version>
+	<licence>MIT</licence>
+	<author mail="freebuddy97@gmail.com" homepage="https://github.com/netbuddy">netbuddy</author>
+	<namespace>NextcloudToRagflow</namespace>
+	<category>tools</category>
+	<website>https://github.com/netbuddy/nextcloud2ragflow</website>
+	<bugs>https://github.com/netbuddy/nextcloud2ragflow/issues</bugs>
+	<repository type="git">https://github.com/netbuddy/nextcloud2ragflow</repository>
+	<dependencies>
+		<nextcloud min-version="28" max-version="31"/>
+	</dependencies>
+	<external-app>
+		<docker-install>
+			<registry>docker.io</registry>
+			<image>cloud-py-api/to_gif</image>
+			<image-tag>latest</image-tag>
+		</docker-install>
+		<routes>
+			<route>
+				<url>.*</url>
+				<verb>GET,POST,PUT,DELETE</verb>
+				<access_level>USER</access_level>
+				<headers_to_exclude>[]</headers_to_exclude>
+			</route>
+		</routes>
+	</external-app>
+</info>
